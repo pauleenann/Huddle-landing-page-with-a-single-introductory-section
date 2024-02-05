@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Violet);
+    background-image: url('images/bg-desktop.svg');
+    padding: 50px 100px;
+    background-size: cover;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+
+section {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 60% auto;
+}
+
+.col1 {
+    /* background-color: #ffffff; */
+    padding: 0;
+}
+
+.col1 img {
+    width: 85%;
+}
+
+.col2 {
+    /* background-color: aqua; */
+}
+
+.col2 h1 {
+   margin-top: 50px;
+   font-family: 'Poppins', sans-serif;
+   color: #fff;
+   font-size: 2.7rem;
+   margin-bottom: 15px;
+}
+
+.col2 p {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin-bottom: 30px;
+}
+
+.col2 button {
+    border: none;
+    border-radius: 30px;
+    padding: 18px;
+    width: 180px;
+    background-color: #fff;
+    color: var(--Violet);
+    box-shadow: 2px 2px 5px #00000046;
+}
+
+button:hover {
+    background-color: var(--Soft-Magenta);
+    color: #fff;
+    cursor: pointer;
+}
+
+a i:hover{
+    border: 1px solid var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+}
+
+footer {
+    margin-top: 100px;
+    display: flex;
+    justify-content: end;
+}
+
+footer a i {
+    margin-left: 10px;
+    padding: 12px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width:1200px) {
+    body {
+        background-image: url('images/bg-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    section {
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+    .col1 img{
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50px;
+    }
+
+    .col2 button {
+        min-width: 40%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .col2 h1 {
+        margin-top: 30px;
+        font-size: 1.8rem;
+    }
+
+    .col2 p {
+        font-size: 1.2rem;
+    }
+    
+}
